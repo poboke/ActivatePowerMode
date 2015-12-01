@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  AllTargets
+//
+//  Created by Jobs on 15/12/1.
+//  Copyright (c) 2015年 Jobs. All rights reserved.
+//
+
+#ifndef AllTargets_PrefixHeader_pch
+#define AllTargets_PrefixHeader_pch
+
+#import <Cocoa/Cocoa.h>
+#import "JRSwizzle.h"
+
+#endif

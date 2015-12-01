@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C53992471C008438008CB536 /* DVTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53992461C008438008CB536 /* DVTKit.framework */; };
+		C539924A1C008514008CB536 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53992491C008514008CB536 /* IDEKit.framework */; };
+		C545BE4A1C0DDBF70028DF46 /* IDESourceEditor in Frameworks */ = {isa = PBXBuildFile; fileRef = C545BE491C0DDBF70028DF46 /* IDESourceEditor */; };
+		C5A181DB1C00270600E66ED0 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A181DA1C00270600E66ED0 /* AppKit.framework */; };
+		C5A181DD1C00270600E66ED0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A181DC1C00270600E66ED0 /* Foundation.framework */; };
+		C5A181E41C00270600E66ED0 /* ActivatePowerMode.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A181E31C00270600E66ED0 /* ActivatePowerMode.m */; };
+		C5A18D891C00C78900B1562D /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A18D881C00C78900B1562D /* JRSwizzle.m */; };
+		C5E47F7F1C0DE390006D2885 /* IDESourceCodeEditor+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E47F7E1C0DE390006D2885 /* IDESourceCodeEditor+Hook.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C539922F1C0066E1008CB536 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C545BE491C0DDBF70028DF46 /* IDESourceEditor */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = IDESourceEditor; path = /Applications/Xcode.app/Contents/PlugIns/IDESourceEditor.ideplugin/Contents/MacOS/IDESourceEditor; sourceTree = "<group>"; };
+		C53992461C008438008CB536 /* DVTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTKit.framework; path = /Applications/Xcode.app/Contents/SharedFrameworks/DVTKit.framework; sourceTree = "<group>"; };
+		C53992491C008514008CB536 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = /Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
+		C545BE481C0DDB890028DF46 /* IDESourceCodeEditorContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceCodeEditorContainerView.h; sourceTree = "<group>"; };
+		C545BE4B1C0DDD6A0028DF46 /* DVTLayoutView_ML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTLayoutView_ML.h; sourceTree = "<group>"; };
+		C5A181D71C00270600E66ED0 /* ActivatePowerMode.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActivatePowerMode.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5A181DA1C00270600E66ED0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		C5A181DC1C00270600E66ED0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		C5A181E21C00270600E66ED0 /* ActivatePowerMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivatePowerMode.h; sourceTree = "<group>"; };
+		C5A181E31C00270600E66ED0 /* ActivatePowerMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivatePowerMode.m; sourceTree = "<group>"; };
+		C5A181E51C00270600E66ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5A18D871C00C78900B1562D /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
+		C5A18D881C00C78900B1562D /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
+		C5E47F791C0DDFC4006D2885 /* IDESourceCodeEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceCodeEditor.h; sourceTree = "<group>"; };
+		C5E47F7A1C0DDFE3006D2885 /* IDEEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEEditor.h; sourceTree = "<group>"; };
+		C5E47F7B1C0DE014006D2885 /* IDEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEViewController.h; sourceTree = "<group>"; };
+		C5E47F7C1C0DE037006D2885 /* DVTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTViewController.h; sourceTree = "<group>"; };
+		C5E47F7D1C0DE390006D2885 /* IDESourceCodeEditor+Hook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDESourceCodeEditor+Hook.h"; sourceTree = "<group>"; };
+		C5E47F7E1C0DE390006D2885 /* IDESourceCodeEditor+Hook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IDESourceCodeEditor+Hook.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5A181D51C00270600E66ED0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C545BE4A1C0DDBF70028DF46 /* IDESourceEditor in Frameworks */,
+				C53992471C008438008CB536 /* DVTKit.framework in Frameworks */,
+				C539924A1C008514008CB536 /* IDEKit.framework in Frameworks */,
+				C5A181DB1C00270600E66ED0 /* AppKit.framework in Frameworks */,
+				C5A181DD1C00270600E66ED0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C539922B1C0066E1008CB536 /* HookClasses */ = {
+			isa = PBXGroup;
+			children = (
+				C5E47F7D1C0DE390006D2885 /* IDESourceCodeEditor+Hook.h */,
+				C5E47F7E1C0DE390006D2885 /* IDESourceCodeEditor+Hook.m */,
+			);
+			path = HookClasses;
+			sourceTree = "<group>";
+		};
+		C53992301C0066E1008CB536 /* XcodeHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				C5E47F7C1C0DE037006D2885 /* DVTViewController.h */,
+				C5E47F7B1C0DE014006D2885 /* IDEViewController.h */,
+				C5E47F7A1C0DDFE3006D2885 /* IDEEditor.h */,
+				C5E47F791C0DDFC4006D2885 /* IDESourceCodeEditor.h */,
+				C545BE4B1C0DDD6A0028DF46 /* DVTLayoutView_ML.h */,
+				C545BE481C0DDB890028DF46 /* IDESourceCodeEditorContainerView.h */,
+			);
+			path = XcodeHeaders;
+			sourceTree = "<group>";
+		};
+		C53992411C00812C008CB536 /* Other Framewotks */ = {
+			isa = PBXGroup;
+			children = (
+				C5A181DA1C00270600E66ED0 /* AppKit.framework */,
+				C5A181DC1C00270600E66ED0 /* Foundation.framework */,
+			);
+			name = "Other Framewotks";
+			sourceTree = "<group>";
+		};
+		C5A181CE1C00270600E66ED0 = {
+			isa = PBXGroup;
+			children = (
+				C5A181DE1C00270600E66ED0 /* ActivatePowerMode */,
+				C5A181D91C00270600E66ED0 /* Frameworks */,
+				C5A181D81C00270600E66ED0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C5A181D81C00270600E66ED0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5A181D71C00270600E66ED0 /* ActivatePowerMode.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5A181D91C00270600E66ED0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C545BE491C0DDBF70028DF46 /* IDESourceEditor */,
+				C53992461C008438008CB536 /* DVTKit.framework */,
+				C53992491C008514008CB536 /* IDEKit.framework */,
+				C53992411C00812C008CB536 /* Other Framewotks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5A181DE1C00270600E66ED0 /* ActivatePowerMode */ = {
+			isa = PBXGroup;
+			children = (
+				C5A181E21C00270600E66ED0 /* ActivatePowerMode.h */,
+				C5A181E31C00270600E66ED0 /* ActivatePowerMode.m */,
+				C539922B1C0066E1008CB536 /* HookClasses */,
+				C53992301C0066E1008CB536 /* XcodeHeaders */,
+				C5A18D861C00C78900B1562D /* JRSwizzle */,
+				C5A181DF1C00270600E66ED0 /* Supporting Files */,
+			);
+			path = ActivatePowerMode;
+			sourceTree = "<group>";
+		};
+		C5A181DF1C00270600E66ED0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5A181E51C00270600E66ED0 /* Info.plist */,
+				C539922F1C0066E1008CB536 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5A18D861C00C78900B1562D /* JRSwizzle */ = {
+			isa = PBXGroup;
+			children = (
+				C5A18D871C00C78900B1562D /* JRSwizzle.h */,
+				C5A18D881C00C78900B1562D /* JRSwizzle.m */,
+			);
+			path = JRSwizzle;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5A181D61C00270600E66ED0 /* ActivatePowerMode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5A181E81C00270600E66ED0 /* Build configuration list for PBXNativeTarget "ActivatePowerMode" */;
+			buildPhases = (
+				C5A181D31C00270600E66ED0 /* Sources */,
+				C5A181D41C00270600E66ED0 /* Resources */,
+				C5A181D51C00270600E66ED0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ActivatePowerMode;
+			productName = ActivatePowerMode;
+			productReference = C5A181D71C00270600E66ED0 /* ActivatePowerMode.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5A181CF1C00270600E66ED0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Jobs;
+				TargetAttributes = {
+					C5A181D61C00270600E66ED0 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = C5A181D21C00270600E66ED0 /* Build configuration list for PBXProject "ActivatePowerMode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C5A181CE1C00270600E66ED0;
+			productRefGroup = C5A181D81C00270600E66ED0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5A181D61C00270600E66ED0 /* ActivatePowerMode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5A181D41C00270600E66ED0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5A181D31C00270600E66ED0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5A181E41C00270600E66ED0 /* ActivatePowerMode.m in Sources */,
+				C5E47F7F1C0DE390006D2885 /* IDESourceCodeEditor+Hook.m in Sources */,
+				C5A18D891C00C78900B1562D /* JRSwizzle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C5A181E61C00270600E66ED0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		C5A181E71C00270600E66ED0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		C5A181E91C00270600E66ED0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_DIR)/../Frameworks",
+					"$(DEVELOPER_DIR)/../SharedFrameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/PrefixHeader.pch";
+				INFOPLIST_FILE = ActivatePowerMode/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.poboke.ActivatePowerMode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		C5A181EA1C00270600E66ED0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_DIR)/../Frameworks",
+					"$(DEVELOPER_DIR)/../SharedFrameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/PrefixHeader.pch";
+				INFOPLIST_FILE = ActivatePowerMode/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.poboke.ActivatePowerMode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C5A181D21C00270600E66ED0 /* Build configuration list for PBXProject "ActivatePowerMode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5A181E61C00270600E66ED0 /* Debug */,
+				C5A181E71C00270600E66ED0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5A181E81C00270600E66ED0 /* Build configuration list for PBXNativeTarget "ActivatePowerMode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5A181E91C00270600E66ED0 /* Debug */,
+				C5A181EA1C00270600E66ED0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5A181CF1C00270600E66ED0 /* Project object */;
+}
