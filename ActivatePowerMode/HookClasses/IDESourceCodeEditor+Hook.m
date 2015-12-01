@@ -27,16 +27,12 @@
 
 - (void)shake
 {
-    CGFloat intensity = 1 + 2 * (CGFloat)(arc4random() % 100) / 100;
+    CGFloat intensity = arc4random() % 3 + 1;
     CGFloat x = intensity * ((arc4random() % 2 == 0) ? -1 : 1);
     CGFloat y = intensity * ((arc4random() % 2 == 0) ? -1 : 1);
+    [self moveToPoint:CGPointMake(x, y)];
     
-    CGPoint point = self.view.frame.origin;
-    point.x += x;
-    point.y += y;
-    [self moveToPoint:point];
-    
-    CGFloat shakeDurationTime = 0.075;
+    CGFloat shakeDurationTime = 0.00618;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(shakeDurationTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self moveToPoint:CGPointMake(0, 0)];
     });
