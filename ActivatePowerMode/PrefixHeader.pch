@@ -12,4 +12,6 @@
 #import <Cocoa/Cocoa.h>
 #import "JRSwizzle.h"
 
+#define RandomRange(min, max) ((arc4random() % (max - min)) + min)
+
 #endif

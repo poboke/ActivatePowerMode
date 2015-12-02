@@ -4,6 +4,8 @@
 
   An idea from [https://github.com/JoelBesada/activate-power-mode](https://github.com/JoelBesada/activate-power-mode).
 
+  ![image](https://github.com/poboke/ActivatePowerMode/raw/master/Screenshots/about.gif)
+
 ## Usage
   You can click the "Plugins" menu, and click the "Enable Activate Power Mode" sub menu.
   Enjoy the power of your code!

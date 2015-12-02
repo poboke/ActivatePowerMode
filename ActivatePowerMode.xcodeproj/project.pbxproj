@@ -14,15 +14,18 @@
 		C5A181DD1C00270600E66ED0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A181DC1C00270600E66ED0 /* Foundation.framework */; };
 		C5A181E41C00270600E66ED0 /* ActivatePowerMode.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A181E31C00270600E66ED0 /* ActivatePowerMode.m */; };
 		C5A18D891C00C78900B1562D /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A18D881C00C78900B1562D /* JRSwizzle.m */; };
+		C5DD210F1C0EAEB0003F07AE /* ShakeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD210E1C0EAEB0003F07AE /* ShakeAction.m */; };
+		C5DD21121C0EB0C7003F07AE /* SparkAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD21111C0EB0C7003F07AE /* SparkAction.m */; };
+		C5DD21151C0EB188003F07AE /* ParticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD21141C0EB188003F07AE /* ParticleView.m */; };
 		C5E47F7F1C0DE390006D2885 /* IDESourceCodeEditor+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E47F7E1C0DE390006D2885 /* IDESourceCodeEditor+Hook.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C539922F1C0066E1008CB536 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		C545BE491C0DDBF70028DF46 /* IDESourceEditor */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = IDESourceEditor; path = /Applications/Xcode.app/Contents/PlugIns/IDESourceEditor.ideplugin/Contents/MacOS/IDESourceEditor; sourceTree = "<group>"; };
 		C53992461C008438008CB536 /* DVTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTKit.framework; path = /Applications/Xcode.app/Contents/SharedFrameworks/DVTKit.framework; sourceTree = "<group>"; };
 		C53992491C008514008CB536 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = /Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
 		C545BE481C0DDB890028DF46 /* IDESourceCodeEditorContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceCodeEditorContainerView.h; sourceTree = "<group>"; };
+		C545BE491C0DDBF70028DF46 /* IDESourceEditor */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = IDESourceEditor; path = /Applications/Xcode.app/Contents/PlugIns/IDESourceEditor.ideplugin/Contents/MacOS/IDESourceEditor; sourceTree = "<group>"; };
 		C545BE4B1C0DDD6A0028DF46 /* DVTLayoutView_ML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTLayoutView_ML.h; sourceTree = "<group>"; };
 		C5A181D71C00270600E66ED0 /* ActivatePowerMode.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActivatePowerMode.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A181DA1C00270600E66ED0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -32,6 +35,12 @@
 		C5A181E51C00270600E66ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5A18D871C00C78900B1562D /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
 		C5A18D881C00C78900B1562D /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
+		C5DD210D1C0EAEB0003F07AE /* ShakeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShakeAction.h; sourceTree = "<group>"; };
+		C5DD210E1C0EAEB0003F07AE /* ShakeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakeAction.m; sourceTree = "<group>"; };
+		C5DD21101C0EB0C7003F07AE /* SparkAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SparkAction.h; sourceTree = "<group>"; };
+		C5DD21111C0EB0C7003F07AE /* SparkAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SparkAction.m; sourceTree = "<group>"; };
+		C5DD21131C0EB188003F07AE /* ParticleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleView.h; sourceTree = "<group>"; };
+		C5DD21141C0EB188003F07AE /* ParticleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticleView.m; sourceTree = "<group>"; };
 		C5E47F791C0DDFC4006D2885 /* IDESourceCodeEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceCodeEditor.h; sourceTree = "<group>"; };
 		C5E47F7A1C0DDFE3006D2885 /* IDEEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEEditor.h; sourceTree = "<group>"; };
 		C5E47F7B1C0DE014006D2885 /* IDEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEViewController.h; sourceTree = "<group>"; };
@@ -120,6 +129,9 @@
 			children = (
 				C5A181E21C00270600E66ED0 /* ActivatePowerMode.h */,
 				C5A181E31C00270600E66ED0 /* ActivatePowerMode.m */,
+				C5DD21131C0EB188003F07AE /* ParticleView.h */,
+				C5DD21141C0EB188003F07AE /* ParticleView.m */,
+				C5DD210C1C0EAE60003F07AE /* Actions */,
 				C539922B1C0066E1008CB536 /* HookClasses */,
 				C53992301C0066E1008CB536 /* XcodeHeaders */,
 				C5A18D861C00C78900B1562D /* JRSwizzle */,
@@ -144,6 +156,17 @@
 				C5A18D881C00C78900B1562D /* JRSwizzle.m */,
 			);
 			path = JRSwizzle;
+			sourceTree = "<group>";
+		};
+		C5DD210C1C0EAE60003F07AE /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				C5DD210D1C0EAEB0003F07AE /* ShakeAction.h */,
+				C5DD210E1C0EAEB0003F07AE /* ShakeAction.m */,
+				C5DD21101C0EB0C7003F07AE /* SparkAction.h */,
+				C5DD21111C0EB0C7003F07AE /* SparkAction.m */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +235,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5DD21151C0EB188003F07AE /* ParticleView.m in Sources */,
 				C5A181E41C00270600E66ED0 /* ActivatePowerMode.m in Sources */,
 				C5E47F7F1C0DE390006D2885 /* IDESourceCodeEditor+Hook.m in Sources */,
+				C5DD210F1C0EAEB0003F07AE /* ShakeAction.m in Sources */,
+				C5DD21121C0EB0C7003F07AE /* SparkAction.m in Sources */,
 				C5A18D891C00C78900B1562D /* JRSwizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
