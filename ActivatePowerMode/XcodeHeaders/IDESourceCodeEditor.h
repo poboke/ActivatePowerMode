@@ -5,6 +5,7 @@
 //
 
 #import "IDEEditor.h"
+#import "IDESourceCodeDocument.h"
 
 //#import "DVTFindBarFindable.h"
 //#import "DVTSourceTextViewDelegate.h"

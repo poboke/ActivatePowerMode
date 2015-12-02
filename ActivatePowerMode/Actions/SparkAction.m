@@ -9,7 +9,7 @@
 #import "SparkAction.h"
 #import "ParticleView.h"
 
-NSInteger const MaxParticleCount = 50;
+NSInteger const MaxParticleCount = 100;
 
 @interface SparkAction ()
 
@@ -55,10 +55,9 @@ NSInteger const MaxParticleCount = 50;
 }
 
 
-- (void)sparkAtPosition:(CGPoint)position inView:(NSView *)view
+- (void)sparkAtPosition:(CGPoint)position withColor:(NSColor *)color inView:(NSView *)view
 {
-    NSColor *color = [self randomColor];
-    NSInteger number = 5 + RandomRange(0, 5);
+    NSInteger number = 5 + RandomRange(0, 10);
     
     for (NSInteger i = 0; i < number; i++) {
         
@@ -91,22 +90,8 @@ NSInteger const MaxParticleCount = 50;
             particle.position.x + particle.velocity.x,
             particle.position.y + particle.velocity.y
         };
-        particle.alpha *= 0.94;
+        particle.alpha *= 0.93;
     }
-}
-
-
-/**
- *  Return bright random color
- *
- *  @return color
- */
-- (NSColor *)randomColor
-{
-    return [NSColor colorWithRed:(RandomRange(80, 255) / 255.0)
-                           green:(RandomRange(80, 255) / 255.0)
-                            blue:(RandomRange(80, 255) / 255.0)
-                           alpha:1.0];
 }
 
 @end

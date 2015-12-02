@@ -8,7 +8,7 @@
 
 #import "ParticleView.h"
 
-CGFloat const ParticleWidth = 3.5;
+CGFloat const ParticleWidth = 3.0;
 
 @implementation ParticleView
 
@@ -23,7 +23,7 @@ CGFloat const ParticleWidth = 3.5;
         _alpha    = 1.0;
         _velocity = (Velocity){
             -1.0 + (RandomRange(0, 100) / 100.0) * 2,
-            -4.5 + (RandomRange(0, 100) / 100.0) * 2
+            -3.5 + (RandomRange(0, 100) / 100.0) * 2
         };
     }
     
@@ -42,7 +42,7 @@ CGFloat const ParticleWidth = 3.5;
 {
     [super drawRect:dirtyRect];
     
-    NSColor *color = [self.color colorWithAlphaComponent:self.alpha + 0.3];
+    NSColor *color = [self.color colorWithAlphaComponent:self.alpha + 0.2];
     [color set];
     
     NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:dirtyRect xRadius:ParticleWidth yRadius:ParticleWidth];

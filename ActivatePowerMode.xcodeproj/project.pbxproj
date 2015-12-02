@@ -35,6 +35,7 @@
 		C5A181E51C00270600E66ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5A18D871C00C78900B1562D /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
 		C5A18D881C00C78900B1562D /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
+		C5AD582E1C0F3467009CC42D /* DVTTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTTextStorage.h; sourceTree = "<group>"; };
 		C5DD210D1C0EAEB0003F07AE /* ShakeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShakeAction.h; sourceTree = "<group>"; };
 		C5DD210E1C0EAEB0003F07AE /* ShakeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakeAction.m; sourceTree = "<group>"; };
 		C5DD21101C0EB0C7003F07AE /* SparkAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SparkAction.h; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		C5E47F7C1C0DE037006D2885 /* DVTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTViewController.h; sourceTree = "<group>"; };
 		C5E47F7D1C0DE390006D2885 /* IDESourceCodeEditor+Hook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDESourceCodeEditor+Hook.h"; sourceTree = "<group>"; };
 		C5E47F7E1C0DE390006D2885 /* IDESourceCodeEditor+Hook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IDESourceCodeEditor+Hook.m"; sourceTree = "<group>"; };
+		C5F23D901C0F4B3800EB59B0 /* IDESourceCodeDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceCodeDocument.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,8 @@
 		C53992301C0066E1008CB536 /* XcodeHeaders */ = {
 			isa = PBXGroup;
 			children = (
+				C5AD582E1C0F3467009CC42D /* DVTTextStorage.h */,
+				C5F23D901C0F4B3800EB59B0 /* IDESourceCodeDocument.h */,
 				C5E47F7C1C0DE037006D2885 /* DVTViewController.h */,
 				C5E47F7B1C0DE014006D2885 /* IDEViewController.h */,
 				C5E47F7A1C0DDFE3006D2885 /* IDEEditor.h */,

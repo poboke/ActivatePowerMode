@@ -15,25 +15,38 @@
 
 + (void)hook
 {
-    [self jr_swizzleMethod:@selector(textView:shouldChangeTextInRange:replacementString:) withMethod:@selector(hook_textView:shouldChangeTextInRange:replacementString:) error:nil];
+    [self jr_swizzleMethod:@selector(textView:shouldChangeTextInRange:replacementString:)
+                withMethod:@selector(hook_textView:shouldChangeTextInRange:replacementString:)
+                     error:nil];
 }
 
 
 - (BOOL)hook_textView:(NSTextView *)textView shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(NSString *)replacementString
 {
+    // Get the position under the cursor
     NSUInteger count = 0;
     NSInteger location = textView.selectedRange.location;
     NSRect rect = *[textView.layoutManager rectArrayForCharacterRange:NSMakeRange(location, 0)
                                          withinSelectedCharacterRange:NSMakeRange(location, 0)
                                                       inTextContainer:textView.textContainer
                                                             rectCount:&count];
-    [[SparkAction sharedAction] sparkAtPosition:rect.origin inView:textView];
+    CGPoint position = rect.origin;
+
+    // Get the color under the cursor
+    location = MAX(location - 1, 0);
+    NSRange range = NSMakeRange(location, 1);
+    NSColor *color = [self.sourceCodeDocument.textStorage colorAtCharacterIndex:location
+                                                                 effectiveRange:&range
+                                                                        context:nil];
+    if (!color) {
+        color = [NSColor whiteColor];
+    }
+    
+    [[SparkAction sharedAction] sparkAtPosition:position withColor:color inView:textView];
     
     [ShakeAction shakeView:textView];
     
     return [self hook_textView:textView shouldChangeTextInRange:affectedCharRange replacementString:replacementString];
 }
-
-
 
 @end

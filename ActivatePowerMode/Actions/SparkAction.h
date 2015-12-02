@@ -11,6 +11,6 @@
 @interface SparkAction : NSObject
 
 + (instancetype)sharedAction;
-- (void)sparkAtPosition:(CGPoint)position inView:(NSView *)view;
+- (void)sparkAtPosition:(CGPoint)position withColor:(NSColor *)color inView:(NSView *)view;
 
 @end

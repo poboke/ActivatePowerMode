@@ -99,6 +99,13 @@
 }
 
 
+- (void)activatePowerMode
+{
+    // Jobs
+    NSLog(@"Hello world!");
+}
+
+
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
