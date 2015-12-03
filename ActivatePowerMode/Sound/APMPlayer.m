@@ -33,12 +33,14 @@
 
 - (void)playSound
 {
-    [self.sound play];
+    if (self.enable) {
+        [self.sound play];
+    }
 }
 
 - (void)playSoundWithPath:(NSString *)path
 {
-    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path] && self.enable) {
         self.sound = [[NSSound alloc] initWithContentsOfFile:path byReference:YES];
         [self.sound play];
     }

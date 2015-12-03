@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface APMPlayer : NSObject
-
+@property (nonatomic, assign) BOOL enable;
 +(instancetype)defaultPlayer;
 - (void)playSound;
 - (void)playSoundWithPath:(NSString *)path;
