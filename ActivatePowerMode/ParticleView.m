@@ -42,7 +42,7 @@ CGFloat const ParticleWidth = 3.0;
 {
     [super drawRect:dirtyRect];
     
-    NSColor *color = [self.color colorWithAlphaComponent:self.alpha + 0.2];
+    NSColor *color = [self.color colorWithAlphaComponent:self.alpha + 0.3];
     [color set];
     
     NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:dirtyRect xRadius:ParticleWidth yRadius:ParticleWidth];

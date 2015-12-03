@@ -57,7 +57,7 @@ NSInteger const MaxParticleCount = 100;
 
 - (void)sparkAtPosition:(CGPoint)position withColor:(NSColor *)color inView:(NSView *)view
 {
-    NSInteger number = 5 + RandomRange(0, 10);
+    NSInteger number = 5 + RandomRange(0, 5);
     
     for (NSInteger i = 0; i < number; i++) {
         
@@ -90,7 +90,7 @@ NSInteger const MaxParticleCount = 100;
             particle.position.x + particle.velocity.x,
             particle.position.y + particle.velocity.y
         };
-        particle.alpha *= 0.93;
+        particle.alpha *= 0.91;
     }
 }
 

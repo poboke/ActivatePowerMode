@@ -146,11 +146,11 @@
 		C5A181DE1C00270600E66ED0 /* ActivatePowerMode */ = {
 			isa = PBXGroup;
 			children = (
-				BB123EC71C0FDBE000E51FCE /* Sound */,
 				C5A181E21C00270600E66ED0 /* ActivatePowerMode.h */,
 				C5A181E31C00270600E66ED0 /* ActivatePowerMode.m */,
 				C5DD21131C0EB188003F07AE /* ParticleView.h */,
 				C5DD21141C0EB188003F07AE /* ParticleView.m */,
+				BB123EC71C0FDBE000E51FCE /* Sound */,
 				C5DD210C1C0EAE60003F07AE /* Actions */,
 				C539922B1C0066E1008CB536 /* HookClasses */,
 				C53992301C0066E1008CB536 /* XcodeHeaders */,
