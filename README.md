@@ -2,12 +2,17 @@
 # ActivatePowerMode
   ActivatePowerMode is a plugin for Xcode. This plugin will make your code powerful.
 
-  An idea from [https://github.com/JoelBesada/activate-power-mode](https://github.com/JoelBesada/activate-power-mode).
+  An idea from [activate-power-mode](https://github.com/JoelBesada/activate-power-mode).
 
   ![image](https://github.com/poboke/ActivatePowerMode/raw/master/Screenshots/about.gif)
 
-## Usage
-  You can click the "Plugins" menu, and click the "Enable Activate Power Mode" sub menu.
+## Effect Switch
+
+  ![image](https://github.com/poboke/ActivatePowerMode/raw/master/Screenshots/switch.png)
+
+  Click the "Plugins" menu, choose the "Activate Power Mode" sub menu.
+  And then you can turn on / off the effect.
+
   Enjoy the power of your code!
 
 ## Support Xcode Versions
@@ -15,7 +20,7 @@
   - Xcode7
 
 ## Auto Install
-  Using [Alcatraz](https://github.com/mneorr/Alcatraz)
+  Using [Alcatraz](https://github.com/alcatraz/Alcatraz)
 
 ## Manual build and install
   - Download source code and open ActivatePowerMode.xcodeproj with Xcode.

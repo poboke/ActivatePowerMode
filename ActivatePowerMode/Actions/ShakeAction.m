@@ -12,6 +12,10 @@
 
 + (void)shakeView:(NSView *)view
 {
+    if (![ConfigManager sharedManager].isEnableShake) {
+        return;
+    }
+    
     CGFloat intensity = arc4random() % 3 + 1;
     CGFloat x = intensity * ((arc4random() % 2 == 0) ? -1 : 1);
     CGFloat y = intensity * ((arc4random() % 2 == 0) ? -1 : 1);

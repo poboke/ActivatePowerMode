@@ -8,7 +8,7 @@
 
 #import "ActivatePowerMode.h"
 #import "IDESourceCodeEditor+Hook.h"
-#import "APMPlayer.h"
+#import "MainMenuItem.h"
 
 @interface ActivatePowerMode ()
 
@@ -63,17 +63,17 @@
                                                   object:nil];
     
     [self addPluginsMenu];
+    
+    if ([ConfigManager sharedManager].isEnablePlugin) {
+        [IDESourceCodeEditor hook];
+    }
 }
 
 
 - (void)addPluginsMenu
 {
-    NSMenu *mainMenu = [NSApp mainMenu];
-    if (!mainMenu) {
-        return;
-    }
-    
     // Add Plugins menu next to Window menu
+    NSMenu *mainMenu = [NSApp mainMenu];
     NSMenuItem *pluginsMenuItem = [mainMenu itemWithTitle:@"Plugins"];
     if (!pluginsMenuItem) {
         pluginsMenuItem = [[NSMenuItem alloc] init];
@@ -83,39 +83,8 @@
         [mainMenu insertItem:pluginsMenuItem atIndex:windowIndex];
     }
     
-    // Add "Enable Activate Power Mode" menu item
-    NSMenuItem *subMenuItem = [[NSMenuItem alloc] init];
-    subMenuItem.title = @"Enable Activate Power Mode";
-    subMenuItem.target = self;
-    subMenuItem.action = @selector(toggleMenu:);
-    subMenuItem.state = NSOffState;
-    [pluginsMenuItem.submenu addItem:subMenuItem];
-    
-    NSMenuItem *playSoundItem = [[NSMenuItem alloc] init];
-    playSoundItem.title = @"Enable Play Sound";
-    playSoundItem.target = self;
-    playSoundItem.action = @selector(toggleSound:);
-    playSoundItem.state = NSOffState;
-    [pluginsMenuItem.submenu addItem:playSoundItem];
-}
-
-
-- (void)toggleMenu:(NSMenuItem *)menuItem
-{
-    menuItem.state = !menuItem.state;
-    [IDESourceCodeEditor hook];
-}
-
-- (void)toggleSound:(NSMenuItem *)menuItem
-{
-    menuItem.state = !menuItem.state;
-    [APMPlayer defaultPlayer].enable = ![APMPlayer defaultPlayer].enable;
-}
-
-- (void)activatePowerMode
-{
-    // Jobs
-    NSLog(@"Hello world!");
+    NSMenuItem *mainMenuItem = [[MainMenuItem alloc] init];
+    [pluginsMenuItem.submenu addItem:mainMenuItem];
 }
 
 

@@ -43,6 +43,7 @@
     }
     
     [[APMPlayer defaultPlayer] playSound];
+    
     [[SparkAction sharedAction] sparkAtPosition:position withColor:color inView:textView];
     
     [ShakeAction shakeView:textView];
