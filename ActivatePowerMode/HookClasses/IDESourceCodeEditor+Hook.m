@@ -9,7 +9,7 @@
 #import "IDESourceCodeEditor+Hook.h"
 #import "ShakeAction.h"
 #import "SparkAction.h"
-
+#import "APMPlayer.h"
 
 @implementation IDESourceCodeEditor (Hook)
 
@@ -42,6 +42,7 @@
         color = [NSColor whiteColor];
     }
     
+    [[APMPlayer defaultPlayer] playSound];
     [[SparkAction sharedAction] sparkAtPosition:position withColor:color inView:textView];
     
     [ShakeAction shakeView:textView];

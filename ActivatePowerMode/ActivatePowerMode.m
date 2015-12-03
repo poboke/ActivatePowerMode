@@ -8,6 +8,7 @@
 
 #import "ActivatePowerMode.h"
 #import "IDESourceCodeEditor+Hook.h"
+#import "APMPlayer.h"
 
 @interface ActivatePowerMode ()
 
@@ -89,6 +90,13 @@
     subMenuItem.action = @selector(toggleMenu:);
     subMenuItem.state = NSOffState;
     [pluginsMenuItem.submenu addItem:subMenuItem];
+    
+    NSMenuItem *playSoundItem = [[NSMenuItem alloc] init];
+    playSoundItem.title = @"Enable Play Sound";
+    playSoundItem.target = self;
+    playSoundItem.action = @selector(toggleSound:);
+    playSoundItem.state = NSOffState;
+    [pluginsMenuItem.submenu addItem:playSoundItem];
 }
 
 
@@ -98,6 +106,11 @@
     [IDESourceCodeEditor hook];
 }
 
+- (void)toggleSound:(NSMenuItem *)menuItem
+{
+    menuItem.state = !menuItem.state;
+    [APMPlayer defaultPlayer].enable = ![APMPlayer defaultPlayer].enable;
+}
 
 - (void)activatePowerMode
 {
