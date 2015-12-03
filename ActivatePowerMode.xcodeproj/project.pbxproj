@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB123EC61C0FDBDC00E51FCE /* sound.aiff in Resources */ = {isa = PBXBuildFile; fileRef = BB123EC51C0FDBDC00E51FCE /* sound.aiff */; };
+		BB123ECD1C0FDC9700E51FCE /* APMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BB123ECC1C0FDC9700E51FCE /* APMPlayer.m */; };
 		C53992471C008438008CB536 /* DVTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53992461C008438008CB536 /* DVTKit.framework */; };
 		C539924A1C008514008CB536 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53992491C008514008CB536 /* IDEKit.framework */; };
 		C545BE4A1C0DDBF70028DF46 /* IDESourceEditor in Frameworks */ = {isa = PBXBuildFile; fileRef = C545BE491C0DDBF70028DF46 /* IDESourceEditor */; };
@@ -21,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB123EC51C0FDBDC00E51FCE /* sound.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = sound.aiff; path = Sound/sound.aiff; sourceTree = "<group>"; };
+		BB123ECB1C0FDC9700E51FCE /* APMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APMPlayer.h; path = Sound/APMPlayer.h; sourceTree = "<group>"; };
+		BB123ECC1C0FDC9700E51FCE /* APMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APMPlayer.m; path = Sound/APMPlayer.m; sourceTree = "<group>"; };
 		C539922F1C0066E1008CB536 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C53992461C008438008CB536 /* DVTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTKit.framework; path = /Applications/Xcode.app/Contents/SharedFrameworks/DVTKit.framework; sourceTree = "<group>"; };
 		C53992491C008514008CB536 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = /Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<group>"; };
@@ -67,6 +72,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB123EC71C0FDBE000E51FCE /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				BB123EC51C0FDBDC00E51FCE /* sound.aiff */,
+				BB123ECB1C0FDC9700E51FCE /* APMPlayer.h */,
+				BB123ECC1C0FDC9700E51FCE /* APMPlayer.m */,
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
 		C539922B1C0066E1008CB536 /* HookClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +146,7 @@
 		C5A181DE1C00270600E66ED0 /* ActivatePowerMode */ = {
 			isa = PBXGroup;
 			children = (
+				BB123EC71C0FDBE000E51FCE /* Sound */,
 				C5A181E21C00270600E66ED0 /* ActivatePowerMode.h */,
 				C5A181E31C00270600E66ED0 /* ActivatePowerMode.m */,
 				C5DD21131C0EB188003F07AE /* ParticleView.h */,
@@ -229,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB123EC61C0FDBDC00E51FCE /* sound.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +261,7 @@
 				C5E47F7F1C0DE390006D2885 /* IDESourceCodeEditor+Hook.m in Sources */,
 				C5DD210F1C0EAEB0003F07AE /* ShakeAction.m in Sources */,
 				C5DD21121C0EB0C7003F07AE /* SparkAction.m in Sources */,
+				BB123ECD1C0FDC9700E51FCE /* APMPlayer.m in Sources */,
 				C5A18D891C00C78900B1562D /* JRSwizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
