@@ -12,7 +12,12 @@ static NSString * const ActivatePowerModePluginConfigKeyEnablePlugin = @"Activat
 static NSString * const ActivatePowerModePluginConfigKeyEnableShake = @"ActivatePowerModePluginConfigKeyEnableShake";
 static NSString * const ActivatePowerModePluginConfigKeyEnableSound = @"ActivatePowerModePluginConfigKeyEnableSound";
 
+
 @implementation ConfigManager
+
+@synthesize enablePlugin = _enablePlugin;
+@synthesize enableShake  = _enableShake;
+@synthesize enableSound  = _enableSound;
 
 + (instancetype)sharedManager
 {
@@ -46,45 +51,62 @@ static NSString * const ActivatePowerModePluginConfigKeyEnableSound = @"Activate
 
 - (BOOL)isEnablePlugin
 {
-    NSNumber *value = [[NSUserDefaults standardUserDefaults] objectForKey:ActivatePowerModePluginConfigKeyEnablePlugin];
-    
-    if (!value) {
-        self.enablePlugin = YES;
-        self.enableShake  = YES;
-        self.enableSound  = YES;
-        return YES;
+    if (!_enablePlugin) {
+
+        NSNumber *value = [[NSUserDefaults standardUserDefaults] objectForKey:ActivatePowerModePluginConfigKeyEnablePlugin];
+        
+        if (!value) {
+            // First time runing
+            self.enablePlugin = YES;
+            self.enableShake  = YES;
+            self.enableSound  = YES;
+            _enablePlugin = YES;
+        } else {
+            _enablePlugin = [value boolValue];
+        }
     }
     
-    return [value boolValue];
+    return _enablePlugin;
 }
 
 
 - (void)setEnablePlugin:(BOOL)enablePlugin
 {
+    _enablePlugin = enablePlugin;
     [self setBoolValue:enablePlugin forKey:ActivatePowerModePluginConfigKeyEnablePlugin];
 }
 
 
 - (BOOL)isEnableShake
 {
-    return [self boolValueForKey:ActivatePowerModePluginConfigKeyEnableShake];
+    if (!_enableShake) {
+        _enableShake = [self boolValueForKey:ActivatePowerModePluginConfigKeyEnableShake];
+    }
+    
+    return _enableShake;
 }
 
 
 - (void)setEnableShake:(BOOL)enableShake
 {
+    _enableShake = enableShake;
     [self setBoolValue:enableShake forKey:ActivatePowerModePluginConfigKeyEnableShake];
 }
 
 
 - (BOOL)isEnableSound
 {
-    return [self boolValueForKey:ActivatePowerModePluginConfigKeyEnableSound];
+    if (!_enableSound) {
+        _enableSound = [self boolValueForKey:ActivatePowerModePluginConfigKeyEnableSound];
+    }
+    
+    return _enableSound;
 }
 
 
 - (void)setEnableSound:(BOOL)enableSound
 {
+    _enableSound = enableSound;
     [self setBoolValue:enableSound forKey:ActivatePowerModePluginConfigKeyEnableSound];
 }
 
