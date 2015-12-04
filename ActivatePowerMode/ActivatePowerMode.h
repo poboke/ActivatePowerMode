@@ -10,6 +10,8 @@
 
 @interface ActivatePowerMode : NSObject
 
+@property (nonatomic, assign, getter=isEnablePlugin) BOOL enablePlugin;
+
 + (instancetype)sharedPlugin;
 
 @end

@@ -10,6 +10,8 @@
 
 @interface SparkAction : NSObject
 
+@property (nonatomic, assign, getter=isEnableAction) BOOL enableAction;
+
 + (instancetype)sharedAction;
 - (void)sparkAtPosition:(CGPoint)position withColor:(NSColor *)color inView:(NSView *)view;
 

@@ -9,6 +9,7 @@
 #import "ActivatePowerMode.h"
 #import "IDESourceCodeEditor+Hook.h"
 #import "MainMenuItem.h"
+#import "SparkAction.h"
 
 @interface ActivatePowerMode ()
 
@@ -16,6 +17,8 @@
 
 
 @implementation ActivatePowerMode
+
+@synthesize enablePlugin = _enablePlugin;
 
 + (void)pluginDidLoad:(NSBundle *)plugin
 {
@@ -65,7 +68,7 @@
     [self addPluginsMenu];
     
     if ([ConfigManager sharedManager].isEnablePlugin) {
-        [IDESourceCodeEditor hook];
+        self.enablePlugin = YES;
     }
 }
 
@@ -85,6 +88,16 @@
     
     NSMenuItem *mainMenuItem = [[MainMenuItem alloc] init];
     [pluginsMenuItem.submenu addItem:mainMenuItem];
+}
+
+
+- (void)setEnablePlugin:(BOOL)enablePlugin
+{
+    _enablePlugin = enablePlugin;
+    
+    [IDESourceCodeEditor hook];
+    
+    [SparkAction sharedAction].enableAction = _enablePlugin;
 }
 
 

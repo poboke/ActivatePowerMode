@@ -7,7 +7,7 @@
 //
 
 #import "MainMenuItem.h"
-#import "IDESourceCodeEditor+Hook.h"
+#import "ActivatePowerMode.h"
 
 typedef NS_ENUM(NSUInteger, MenuItemType) {
     kMenuItemTypeEnablePlugin = 1,
@@ -70,7 +70,7 @@ typedef NS_ENUM(NSUInteger, MenuItemType) {
             
         case kMenuItemTypeEnablePlugin:
             configManager.enablePlugin = !configManager.isEnablePlugin;
-            [IDESourceCodeEditor hook];
+            [ActivatePowerMode sharedPlugin].enablePlugin = configManager.isEnablePlugin;
             break;
             
         case kMenuItemTypeEnableShake:
