@@ -11,6 +11,7 @@
 @interface ConfigManager : NSObject
 
 @property (nonatomic, assign, getter=isEnablePlugin) BOOL enablePlugin;
+@property (nonatomic, assign, getter=isEnableSpark) BOOL enableSpark;
 @property (nonatomic, assign, getter=isEnableShake) BOOL enableShake;
 @property (nonatomic, assign, getter=isEnableSound) BOOL enableSound;
 

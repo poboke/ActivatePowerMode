@@ -8,12 +8,24 @@
 
 #import "MainMenuItem.h"
 #import "ActivatePowerMode.h"
+#import "SparkAction.h"
 
 typedef NS_ENUM(NSUInteger, MenuItemType) {
     kMenuItemTypeEnablePlugin = 1,
+    kMenuItemTypeEnableSpark,
     kMenuItemTypeEnableShake,
     kMenuItemTypeEnableSound,
 };
+
+
+@interface MainMenuItem ()
+
+@property (nonatomic, strong) NSMenuItem *sparkMenuItem;
+@property (nonatomic, strong) NSMenuItem *shakeMenuItem;
+@property (nonatomic, strong) NSMenuItem *soundMenuItem;
+
+@end
+
 
 @implementation MainMenuItem
 
@@ -29,17 +41,21 @@ typedef NS_ENUM(NSUInteger, MenuItemType) {
         
         ConfigManager *configManager = [ConfigManager sharedManager];
         
-        NSMenuItem *enablePluginMenuItem = [self menuItemWithTitle:@"Enable " type:kMenuItemTypeEnablePlugin];
-        enablePluginMenuItem.state = configManager.isEnablePlugin;
-        [configMenu addItem:enablePluginMenuItem];
+        NSMenuItem *pluginMenuItem = [self menuItemWithTitle:@"Enable" type:kMenuItemTypeEnablePlugin];
+        pluginMenuItem.state = configManager.isEnablePlugin;
+        [configMenu addItem:pluginMenuItem];
         
-        NSMenuItem *enableShakeMenuItem = [self menuItemWithTitle:@"Enable Shake  🗯" type:kMenuItemTypeEnableShake];
-        enableShakeMenuItem.state = configManager.isEnableShake;
-        [configMenu addItem:enableShakeMenuItem];
+        self.sparkMenuItem = [self menuItemWithTitle:@"Enable Spark  ✨" type:kMenuItemTypeEnableSpark];
+        self.sparkMenuItem.state = configManager.isEnableSpark;
+        [configMenu addItem:self.sparkMenuItem];
         
-        NSMenuItem *enableSoundenuItem = [self menuItemWithTitle:@"Enable Sound  🎶" type:kMenuItemTypeEnableSound];
-        enableSoundenuItem.state = configManager.isEnableSound;
-        [configMenu addItem:enableSoundenuItem];
+        self.shakeMenuItem = [self menuItemWithTitle:@"Enable Shake  🗯" type:kMenuItemTypeEnableShake];
+        self.shakeMenuItem.state = configManager.isEnableShake;
+        [configMenu addItem:self.shakeMenuItem];
+        
+        self.soundMenuItem = [self menuItemWithTitle:@"Enable Sound  🎶" type:kMenuItemTypeEnableSound];
+        self.soundMenuItem.state = configManager.isEnableSound;
+        [configMenu addItem:self.soundMenuItem];
     }
     
     return self;
@@ -71,6 +87,14 @@ typedef NS_ENUM(NSUInteger, MenuItemType) {
         case kMenuItemTypeEnablePlugin:
             configManager.enablePlugin = !configManager.isEnablePlugin;
             [ActivatePowerMode sharedPlugin].enablePlugin = configManager.isEnablePlugin;
+            self.sparkMenuItem.enabled = configManager.isEnablePlugin;
+            self.shakeMenuItem.enabled = configManager.isEnablePlugin;
+            self.soundMenuItem.enabled = configManager.isEnablePlugin;
+            break;
+            
+        case kMenuItemTypeEnableSpark:
+            configManager.enableSpark = !configManager.isEnableSpark;
+            [SparkAction sharedAction].enableAction = configManager.isEnableSpark;
             break;
             
         case kMenuItemTypeEnableShake:

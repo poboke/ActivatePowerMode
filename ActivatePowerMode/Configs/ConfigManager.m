@@ -9,6 +9,7 @@
 #import "ConfigManager.h"
 
 static NSString * const ActivatePowerModePluginConfigKeyEnablePlugin = @"ActivatePowerModePluginConfigKeyEnablePlugin";
+static NSString * const ActivatePowerModePluginConfigKeyEnableSpark = @"ActivatePowerModePluginConfigKeyEnableSpark";
 static NSString * const ActivatePowerModePluginConfigKeyEnableShake = @"ActivatePowerModePluginConfigKeyEnableShake";
 static NSString * const ActivatePowerModePluginConfigKeyEnableSound = @"ActivatePowerModePluginConfigKeyEnableSound";
 
@@ -16,6 +17,7 @@ static NSString * const ActivatePowerModePluginConfigKeyEnableSound = @"Activate
 @implementation ConfigManager
 
 @synthesize enablePlugin = _enablePlugin;
+@synthesize enableSpark  = _enableSpark;
 @synthesize enableShake  = _enableShake;
 @synthesize enableSound  = _enableSound;
 
@@ -58,6 +60,7 @@ static NSString * const ActivatePowerModePluginConfigKeyEnableSound = @"Activate
         if (!value) {
             // First time runing
             self.enablePlugin = YES;
+            self.enableSpark  = YES;
             self.enableShake  = YES;
             self.enableSound  = YES;
             _enablePlugin = YES;
@@ -74,6 +77,23 @@ static NSString * const ActivatePowerModePluginConfigKeyEnableSound = @"Activate
 {
     _enablePlugin = enablePlugin;
     [self setBoolValue:enablePlugin forKey:ActivatePowerModePluginConfigKeyEnablePlugin];
+}
+
+
+- (BOOL)isEnableSpark
+{
+    if (!_enableSpark) {
+        _enableSpark = [self boolValueForKey:ActivatePowerModePluginConfigKeyEnableSpark];
+    }
+    
+    return _enableSpark;
+}
+
+
+- (void)setEnableSpark:(BOOL)enableSpark
+{
+    _enableSpark = enableSpark;
+    [self setBoolValue:enableSpark forKey:ActivatePowerModePluginConfigKeyEnableSpark];
 }
 
 
