@@ -47,14 +47,17 @@ typedef NS_ENUM(NSUInteger, MenuItemType) {
         
         self.sparkMenuItem = [self menuItemWithTitle:@"Enable Spark  ✨" type:kMenuItemTypeEnableSpark];
         self.sparkMenuItem.state = configManager.isEnableSpark;
+        self.sparkMenuItem.enabled = configManager.isEnablePlugin;
         [configMenu addItem:self.sparkMenuItem];
         
         self.shakeMenuItem = [self menuItemWithTitle:@"Enable Shake  🗯" type:kMenuItemTypeEnableShake];
         self.shakeMenuItem.state = configManager.isEnableShake;
+        self.shakeMenuItem.enabled = configManager.isEnablePlugin;
         [configMenu addItem:self.shakeMenuItem];
         
         self.soundMenuItem = [self menuItemWithTitle:@"Enable Sound  🎶" type:kMenuItemTypeEnableSound];
         self.soundMenuItem.state = configManager.isEnableSound;
+        self.soundMenuItem.enabled = configManager.isEnablePlugin;
         [configMenu addItem:self.soundMenuItem];
     }
     
