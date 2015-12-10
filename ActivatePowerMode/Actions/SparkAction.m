@@ -51,7 +51,7 @@ NSInteger const MaxParticleCount = 100;
 
 - (void)sparkAtPosition:(CGPoint)position withColor:(NSColor *)color inView:(NSView *)view
 {
-    if (!self.isEnableAction) {
+    if (![ConfigManager sharedManager].isEnableSpark) {
         return;
     }
     
