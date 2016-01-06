@@ -14,6 +14,7 @@
 @property (nonatomic, assign, getter=isEnableSpark) BOOL enableSpark;
 @property (nonatomic, assign, getter=isEnableShake) BOOL enableShake;
 @property (nonatomic, assign, getter=isEnableSound) BOOL enableSound;
+@property (nonatomic, assign, getter=isEnabledFreeMode) BOOL enableFreeMode;
 
 + (instancetype)sharedManager;
 
