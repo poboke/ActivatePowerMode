@@ -44,7 +44,9 @@
     
     [[SparkAction sharedAction] sparkAtPosition:position withColor:color inView:textView];
     
-    [ShakeAction shakeView:textView];
+    NSView *view = [ConfigManager sharedManager].isEnabledFreeMode ? (NSView *)self.containerView : textView;
+    
+    [ShakeAction shakeView:view];
     
     [[APMPlayer defaultPlayer] playSound];
     

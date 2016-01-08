@@ -12,7 +12,7 @@ static NSString * const ActivatePowerModePluginConfigKeyEnablePlugin = @"Activat
 static NSString * const ActivatePowerModePluginConfigKeyEnableSpark = @"ActivatePowerModePluginConfigKeyEnableSpark";
 static NSString * const ActivatePowerModePluginConfigKeyEnableShake = @"ActivatePowerModePluginConfigKeyEnableShake";
 static NSString * const ActivatePowerModePluginConfigKeyEnableSound = @"ActivatePowerModePluginConfigKeyEnableSound";
-
+static NSString * const ActivatePowerModePluginConfigKeyEnableFreeMode = @"ActivatePowerModePluginConfigKeyEnableFreeMode";
 
 @implementation ConfigManager
 
@@ -20,6 +20,7 @@ static NSString * const ActivatePowerModePluginConfigKeyEnableSound = @"Activate
 @synthesize enableSpark  = _enableSpark;
 @synthesize enableShake  = _enableShake;
 @synthesize enableSound  = _enableSound;
+@synthesize enableFreeMode = _enableFreeMode;
 
 + (instancetype)sharedManager
 {
@@ -128,6 +129,19 @@ static NSString * const ActivatePowerModePluginConfigKeyEnableSound = @"Activate
 {
     _enableSound = enableSound;
     [self setBoolValue:enableSound forKey:ActivatePowerModePluginConfigKeyEnableSound];
+}
+
+- (BOOL)isEnabledFreeMode {
+    if (!_enableFreeMode) {
+        _enableFreeMode = [self boolValueForKey:ActivatePowerModePluginConfigKeyEnableFreeMode];
+    }
+    
+    return _enableFreeMode;
+}
+
+- (void)setEnableFreeMode:(BOOL)enableFreeMode {
+    _enableFreeMode = enableFreeMode;
+    [self setBoolValue:enableFreeMode forKey:ActivatePowerModePluginConfigKeyEnableFreeMode];
 }
 
 @end

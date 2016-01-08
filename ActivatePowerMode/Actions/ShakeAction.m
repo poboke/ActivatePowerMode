@@ -16,9 +16,12 @@
         return;
     }
     
-    CGFloat intensity = arc4random() % 3 + 1;
-    CGFloat x = intensity * ((arc4random() % 2 == 0) ? -1 : 1);
-    CGFloat y = intensity * ((arc4random() % 2 == 0) ? -1 : 1);
+    // 这里最小摇动参数为1, 最大为3. 效果更好 (free well than ever!)
+    //TODO: 增加参数输入, 在界面上设置为可变摇动参数(Add this intensity value on GUI for min and max.)
+    CGFloat intensity = 1 + arc4random_uniform(3);
+    CGFloat x = intensity * ((arc4random_uniform(2) == 0) ? -1 : 1);
+    CGFloat y = intensity * ((arc4random_uniform(2) == 0) ? -1 : 1);
+    
     [self moveView:view toPoint:CGPointMake(x, y)];
     
     CGFloat shakeDurationTime = 0.00618;
