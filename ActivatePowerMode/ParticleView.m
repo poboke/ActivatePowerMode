@@ -45,8 +45,7 @@ CGFloat const ParticleWidth = 3.0;
     NSColor *color = [self.color colorWithAlphaComponent:self.alpha + 0.3];
     [color set];
     
-    NSBezierPath *path = [ConfigManager sharedManager].isEnabledFreeMode ? [NSBezierPath bezierPathWithRect:NSRectFromCGRect(CGRectMake(0, 0, ParticleWidth, ParticleWidth))] : [NSBezierPath bezierPathWithRoundedRect:dirtyRect xRadius:ParticleWidth yRadius:ParticleWidth];
-    
+    NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:dirtyRect xRadius:ParticleWidth yRadius:ParticleWidth];
     [path fill];
 }
 

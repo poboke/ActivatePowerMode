@@ -52,17 +52,24 @@ typedef NS_ENUM(NSUInteger, MenuItemType) {
         self.sparkMenuItem.enabled = configManager.isEnablePlugin;
         [configMenu addItem:self.sparkMenuItem];
         
+        // Shake Menu Item Begin
+        
         self.shakeMenuItem = [self menuItemWithTitle:@"Enable Shake  🗯" type:kMenuItemTypeEnableShake];
         self.shakeMenuItem.state = configManager.isEnableShake;
         self.shakeMenuItem.enabled = configManager.isEnablePlugin;
         [configMenu addItem:self.shakeMenuItem];
         
-        self.soundMenuItem = [self menuItemWithTitle:@"Enable Sound  🎶" type:kMenuItemTypeEnableSound];
-        self.soundMenuItem.state = configManager.isEnableSound;
-        self.soundMenuItem.enabled = configManager.isEnablePlugin;
-        [configMenu addItem:self.soundMenuItem];
+        NSMenu *shakeConfigMenu = [[NSMenu alloc] init];
+        shakeConfigMenu.autoenablesItems = NSOffState;
+        self.shakeMenuItem.submenu = shakeConfigMenu;
         
-        self.soundMenuItem = [self menuItemWithTitle:@"Enable Free Mode  🌀" type:kMenuItemTypeEnableFreeMode];
+        self.freeModeMenuItem = [self menuItemWithTitle:@"Enable Free Mode  🌀" type:kMenuItemTypeEnableFreeMode];
+        self.freeModeMenuItem.state = configManager.isEnabledFreeMode;
+        [shakeConfigMenu addItem:self.freeModeMenuItem];
+        
+        // Shake Menu Item End
+        
+        self.soundMenuItem = [self menuItemWithTitle:@"Enable Sound  🎶" type:kMenuItemTypeEnableSound];
         self.soundMenuItem.state = configManager.isEnableSound;
         self.soundMenuItem.enabled = configManager.isEnablePlugin;
         [configMenu addItem:self.soundMenuItem];

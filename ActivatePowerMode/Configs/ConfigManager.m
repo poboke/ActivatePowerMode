@@ -131,7 +131,9 @@ static NSString * const ActivatePowerModePluginConfigKeyEnableFreeMode = @"Activ
     [self setBoolValue:enableSound forKey:ActivatePowerModePluginConfigKeyEnableSound];
 }
 
-- (BOOL)isEnabledFreeMode {
+
+- (BOOL)isEnabledFreeMode
+{
     if (!_enableFreeMode) {
         _enableFreeMode = [self boolValueForKey:ActivatePowerModePluginConfigKeyEnableFreeMode];
     }
@@ -139,7 +141,9 @@ static NSString * const ActivatePowerModePluginConfigKeyEnableFreeMode = @"Activ
     return _enableFreeMode;
 }
 
-- (void)setEnableFreeMode:(BOOL)enableFreeMode {
+
+- (void)setEnableFreeMode:(BOOL)enableFreeMode
+{
     _enableFreeMode = enableFreeMode;
     [self setBoolValue:enableFreeMode forKey:ActivatePowerModePluginConfigKeyEnableFreeMode];
 }
