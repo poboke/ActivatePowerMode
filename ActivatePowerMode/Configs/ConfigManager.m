@@ -62,7 +62,6 @@ static NSString * const ActivatePowerModePluginConfigKeyEnableFreeMode = @"Activ
             // First time runing
             self.enablePlugin = YES;
             self.enableSpark  = YES;
-            self.enableShake  = YES;
             self.enableSound  = YES;
             _enablePlugin = YES;
         } else {
