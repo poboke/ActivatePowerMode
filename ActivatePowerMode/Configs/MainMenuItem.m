@@ -65,6 +65,7 @@ typedef NS_ENUM(NSUInteger, MenuItemType) {
         
         self.freeModeMenuItem = [self menuItemWithTitle:@"Enable Free Mode  🌀" type:kMenuItemTypeEnableFreeMode];
         self.freeModeMenuItem.state = configManager.isEnabledFreeMode;
+        self.freeModeMenuItem.enabled = configManager.isEnableShake;
         [shakeConfigMenu addItem:self.freeModeMenuItem];
         
         // Shake Menu Item End
@@ -116,6 +117,7 @@ typedef NS_ENUM(NSUInteger, MenuItemType) {
             
         case kMenuItemTypeEnableShake:
             configManager.enableShake = !configManager.isEnableShake;
+            self.freeModeMenuItem.enabled = configManager.isEnableShake;
             break;
             
         case kMenuItemTypeEnableSound:
