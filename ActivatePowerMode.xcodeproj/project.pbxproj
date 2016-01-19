@@ -12,6 +12,7 @@
 		C53992471C008438008CB536 /* DVTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53992461C008438008CB536 /* DVTKit.framework */; };
 		C539924A1C008514008CB536 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53992491C008514008CB536 /* IDEKit.framework */; };
 		C545BE4A1C0DDBF70028DF46 /* IDESourceEditor in Frameworks */ = {isa = PBXBuildFile; fileRef = C545BE491C0DDBF70028DF46 /* IDESourceEditor */; };
+		C564DB711C4DFD0300CF61FA /* IDESourceCodeEditor+HookPowerMode.m in Sources */ = {isa = PBXBuildFile; fileRef = C564DB701C4DFD0300CF61FA /* IDESourceCodeEditor+HookPowerMode.m */; };
 		C5A181DB1C00270600E66ED0 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A181DA1C00270600E66ED0 /* AppKit.framework */; };
 		C5A181DD1C00270600E66ED0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A181DC1C00270600E66ED0 /* Foundation.framework */; };
 		C5A181E41C00270600E66ED0 /* ActivatePowerMode.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A181E31C00270600E66ED0 /* ActivatePowerMode.m */; };
@@ -21,7 +22,6 @@
 		C5DD210F1C0EAEB0003F07AE /* ShakeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD210E1C0EAEB0003F07AE /* ShakeAction.m */; };
 		C5DD21121C0EB0C7003F07AE /* SparkAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD21111C0EB0C7003F07AE /* SparkAction.m */; };
 		C5DD21151C0EB188003F07AE /* ParticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DD21141C0EB188003F07AE /* ParticleView.m */; };
-		C5E47F7F1C0DE390006D2885 /* IDESourceCodeEditor+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E47F7E1C0DE390006D2885 /* IDESourceCodeEditor+Hook.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +34,8 @@
 		C545BE481C0DDB890028DF46 /* IDESourceCodeEditorContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceCodeEditorContainerView.h; sourceTree = "<group>"; };
 		C545BE491C0DDBF70028DF46 /* IDESourceEditor */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = IDESourceEditor; path = /Applications/Xcode.app/Contents/PlugIns/IDESourceEditor.ideplugin/Contents/MacOS/IDESourceEditor; sourceTree = "<group>"; };
 		C545BE4B1C0DDD6A0028DF46 /* DVTLayoutView_ML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTLayoutView_ML.h; sourceTree = "<group>"; };
+		C564DB6F1C4DFD0300CF61FA /* IDESourceCodeEditor+HookPowerMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDESourceCodeEditor+HookPowerMode.h"; sourceTree = "<group>"; };
+		C564DB701C4DFD0300CF61FA /* IDESourceCodeEditor+HookPowerMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IDESourceCodeEditor+HookPowerMode.m"; sourceTree = "<group>"; };
 		C5A181D71C00270600E66ED0 /* ActivatePowerMode.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActivatePowerMode.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A181DA1C00270600E66ED0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		C5A181DC1C00270600E66ED0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -57,8 +59,6 @@
 		C5E47F7A1C0DDFE3006D2885 /* IDEEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEEditor.h; sourceTree = "<group>"; };
 		C5E47F7B1C0DE014006D2885 /* IDEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEViewController.h; sourceTree = "<group>"; };
 		C5E47F7C1C0DE037006D2885 /* DVTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTViewController.h; sourceTree = "<group>"; };
-		C5E47F7D1C0DE390006D2885 /* IDESourceCodeEditor+Hook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDESourceCodeEditor+Hook.h"; sourceTree = "<group>"; };
-		C5E47F7E1C0DE390006D2885 /* IDESourceCodeEditor+Hook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IDESourceCodeEditor+Hook.m"; sourceTree = "<group>"; };
 		C5F23D901C0F4B3800EB59B0 /* IDESourceCodeDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceCodeDocument.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,8 +91,8 @@
 		C539922B1C0066E1008CB536 /* HookClasses */ = {
 			isa = PBXGroup;
 			children = (
-				C5E47F7D1C0DE390006D2885 /* IDESourceCodeEditor+Hook.h */,
-				C5E47F7E1C0DE390006D2885 /* IDESourceCodeEditor+Hook.m */,
+				C564DB6F1C4DFD0300CF61FA /* IDESourceCodeEditor+HookPowerMode.h */,
+				C564DB701C4DFD0300CF61FA /* IDESourceCodeEditor+HookPowerMode.m */,
 			);
 			path = HookClasses;
 			sourceTree = "<group>";
@@ -276,7 +276,7 @@
 			files = (
 				C5DD21151C0EB188003F07AE /* ParticleView.m in Sources */,
 				C5A181E41C00270600E66ED0 /* ActivatePowerMode.m in Sources */,
-				C5E47F7F1C0DE390006D2885 /* IDESourceCodeEditor+Hook.m in Sources */,
+				C564DB711C4DFD0300CF61FA /* IDESourceCodeEditor+HookPowerMode.m in Sources */,
 				C5B6A0831C10297500F951BF /* MainMenuItem.m in Sources */,
 				C5DD210F1C0EAEB0003F07AE /* ShakeAction.m in Sources */,
 				C5DD21121C0EB0C7003F07AE /* SparkAction.m in Sources */,
