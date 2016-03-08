@@ -15,7 +15,6 @@ typedef NS_ENUM(NSUInteger, MenuItemType) {
     kMenuItemTypeEnableSpark,
     kMenuItemTypeEnableShake,
     kMenuItemTypeEnableSound,
-    kMenuItemTypeEnableFreeMode,
 };
 
 
@@ -24,7 +23,6 @@ typedef NS_ENUM(NSUInteger, MenuItemType) {
 @property (nonatomic, strong) NSMenuItem *sparkMenuItem;
 @property (nonatomic, strong) NSMenuItem *shakeMenuItem;
 @property (nonatomic, strong) NSMenuItem *soundMenuItem;
-@property (nonatomic, strong) NSMenuItem *freeModeMenuItem;
 
 @end
 
@@ -52,23 +50,10 @@ typedef NS_ENUM(NSUInteger, MenuItemType) {
         self.sparkMenuItem.enabled = configManager.isEnablePlugin;
         [configMenu addItem:self.sparkMenuItem];
         
-        // Shake Menu Item Begin
-        
         self.shakeMenuItem = [self menuItemWithTitle:@"Enable Shake  🗯" type:kMenuItemTypeEnableShake];
         self.shakeMenuItem.state = configManager.isEnableShake;
         self.shakeMenuItem.enabled = configManager.isEnablePlugin;
         [configMenu addItem:self.shakeMenuItem];
-        
-        NSMenu *shakeConfigMenu = [[NSMenu alloc] init];
-        shakeConfigMenu.autoenablesItems = NSOffState;
-        self.shakeMenuItem.submenu = shakeConfigMenu;
-        
-        self.freeModeMenuItem = [self menuItemWithTitle:@"Enable Free Mode  🌀" type:kMenuItemTypeEnableFreeMode];
-        self.freeModeMenuItem.state = configManager.isEnabledFreeMode;
-        self.freeModeMenuItem.enabled = configManager.isEnableShake;
-        [shakeConfigMenu addItem:self.freeModeMenuItem];
-        
-        // Shake Menu Item End
         
         self.soundMenuItem = [self menuItemWithTitle:@"Enable Sound  🎶" type:kMenuItemTypeEnableSound];
         self.soundMenuItem.state = configManager.isEnableSound;
@@ -117,15 +102,10 @@ typedef NS_ENUM(NSUInteger, MenuItemType) {
             
         case kMenuItemTypeEnableShake:
             configManager.enableShake = !configManager.isEnableShake;
-            self.freeModeMenuItem.enabled = configManager.isEnableShake;
             break;
             
         case kMenuItemTypeEnableSound:
             configManager.enableSound = !configManager.isEnableSound;
-            break;
-            
-        case kMenuItemTypeEnableFreeMode:
-            configManager.enableFreeMode = !configManager.isEnabledFreeMode;
             break;
     }
 }
