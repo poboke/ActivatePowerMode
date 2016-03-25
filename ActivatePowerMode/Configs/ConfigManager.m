@@ -12,7 +12,6 @@ static NSString * const ActivatePowerModePluginConfigKeyEnablePlugin = @"Activat
 static NSString * const ActivatePowerModePluginConfigKeyEnableSpark = @"ActivatePowerModePluginConfigKeyEnableSpark";
 static NSString * const ActivatePowerModePluginConfigKeyEnableShake = @"ActivatePowerModePluginConfigKeyEnableShake";
 static NSString * const ActivatePowerModePluginConfigKeyEnableSound = @"ActivatePowerModePluginConfigKeyEnableSound";
-static NSString * const ActivatePowerModePluginConfigKeyEnableFreeMode = @"ActivatePowerModePluginConfigKeyEnableFreeMode";
 
 @implementation ConfigManager
 
@@ -20,15 +19,26 @@ static NSString * const ActivatePowerModePluginConfigKeyEnableFreeMode = @"Activ
 @synthesize enableSpark  = _enableSpark;
 @synthesize enableShake  = _enableShake;
 @synthesize enableSound  = _enableSound;
-@synthesize enableFreeMode = _enableFreeMode;
 
 + (instancetype)sharedManager
 {
     static ConfigManager *_sharedManager;
     
     static dispatch_once_t onceToken;
+    
     dispatch_once(&onceToken, ^{
+        
         _sharedManager = [[self alloc] init];
+        
+        NSNumber *value = [[NSUserDefaults standardUserDefaults] objectForKey:ActivatePowerModePluginConfigKeyEnablePlugin];
+        if (!value) {
+            // First time runing
+            _sharedManager.enablePlugin = YES;
+            _sharedManager.enableSpark  = YES;
+            _sharedManager.enableShake  = YES;
+            _sharedManager.enableSound  = YES;
+        }
+
     });
     
     return _sharedManager;
@@ -55,19 +65,7 @@ static NSString * const ActivatePowerModePluginConfigKeyEnableFreeMode = @"Activ
 - (BOOL)isEnablePlugin
 {
     if (!_enablePlugin) {
-
-        NSNumber *value = [[NSUserDefaults standardUserDefaults] objectForKey:ActivatePowerModePluginConfigKeyEnablePlugin];
-        
-        if (!value) {
-            // First time runing
-            self.enablePlugin = YES;
-            self.enableSpark  = YES;
-            self.enableShake  = YES;
-            self.enableSound  = YES;
-            _enablePlugin = YES;
-        } else {
-            _enablePlugin = [value boolValue];
-        }
+        _enablePlugin = [self boolValueForKey:ActivatePowerModePluginConfigKeyEnablePlugin];
     }
     
     return _enablePlugin;
@@ -129,19 +127,6 @@ static NSString * const ActivatePowerModePluginConfigKeyEnableFreeMode = @"Activ
 {
     _enableSound = enableSound;
     [self setBoolValue:enableSound forKey:ActivatePowerModePluginConfigKeyEnableSound];
-}
-
-- (BOOL)isEnabledFreeMode {
-    if (!_enableFreeMode) {
-        _enableFreeMode = [self boolValueForKey:ActivatePowerModePluginConfigKeyEnableFreeMode];
-    }
-    
-    return _enableFreeMode;
-}
-
-- (void)setEnableFreeMode:(BOOL)enableFreeMode {
-    _enableFreeMode = enableFreeMode;
-    [self setBoolValue:enableFreeMode forKey:ActivatePowerModePluginConfigKeyEnableFreeMode];
 }
 
 @end

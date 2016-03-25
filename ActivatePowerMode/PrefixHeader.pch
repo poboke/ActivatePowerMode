@@ -13,7 +13,8 @@
 #import "JRSwizzle.h"
 #import "ConfigManager.h"
 
-#define RandomRange(min, max) ((arc4random() % (max - min)) + min)
+#define RandomRange(min, max) (arc4random_uniform(max - min) + min)
+
 #define PluginVersion ([[NSBundle bundleForClass:[self class]] objectForInfoDictionaryKey:@"CFBundleShortVersionString"])
 
 #endif

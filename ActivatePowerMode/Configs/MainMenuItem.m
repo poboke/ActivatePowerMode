@@ -15,7 +15,6 @@ typedef NS_ENUM(NSUInteger, MenuItemType) {
     kMenuItemTypeEnableSpark,
     kMenuItemTypeEnableShake,
     kMenuItemTypeEnableSound,
-    kMenuItemTypeEnableFreeMode,
 };
 
 
@@ -24,7 +23,6 @@ typedef NS_ENUM(NSUInteger, MenuItemType) {
 @property (nonatomic, strong) NSMenuItem *sparkMenuItem;
 @property (nonatomic, strong) NSMenuItem *shakeMenuItem;
 @property (nonatomic, strong) NSMenuItem *soundMenuItem;
-@property (nonatomic, strong) NSMenuItem *freeModeMenuItem;
 
 @end
 
@@ -58,11 +56,6 @@ typedef NS_ENUM(NSUInteger, MenuItemType) {
         [configMenu addItem:self.shakeMenuItem];
         
         self.soundMenuItem = [self menuItemWithTitle:@"Enable Sound  🎶" type:kMenuItemTypeEnableSound];
-        self.soundMenuItem.state = configManager.isEnableSound;
-        self.soundMenuItem.enabled = configManager.isEnablePlugin;
-        [configMenu addItem:self.soundMenuItem];
-        
-        self.soundMenuItem = [self menuItemWithTitle:@"Enable Free Mode  🌀" type:kMenuItemTypeEnableFreeMode];
         self.soundMenuItem.state = configManager.isEnableSound;
         self.soundMenuItem.enabled = configManager.isEnablePlugin;
         [configMenu addItem:self.soundMenuItem];
@@ -113,10 +106,6 @@ typedef NS_ENUM(NSUInteger, MenuItemType) {
             
         case kMenuItemTypeEnableSound:
             configManager.enableSound = !configManager.isEnableSound;
-            break;
-            
-        case kMenuItemTypeEnableFreeMode:
-            configManager.enableFreeMode = !configManager.isEnabledFreeMode;
             break;
     }
 }

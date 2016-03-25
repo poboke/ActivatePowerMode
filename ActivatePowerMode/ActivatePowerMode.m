@@ -7,7 +7,7 @@
 //
 
 #import "ActivatePowerMode.h"
-#import "IDESourceCodeEditor+Hook.h"
+#import "IDESourceCodeEditor+HookPowerMode.h"
 #import "MainMenuItem.h"
 #import "SparkAction.h"
 
@@ -95,7 +95,7 @@
 {
     _enablePlugin = enablePlugin;
     
-    [IDESourceCodeEditor hook];
+    [IDESourceCodeEditor hookPowerMode];
     
     [SparkAction sharedAction].enableAction = _enablePlugin;
 }

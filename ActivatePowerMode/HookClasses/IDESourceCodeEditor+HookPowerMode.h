@@ -1,5 +1,5 @@
 //
-//  IDESourceCodeEditor+Hook.h
+//  IDESourceCodeEditor+HookPowerMode.h
 //  ActivatePowerMode
 //
 //  Created by Jobs on 15/12/1.
@@ -8,8 +8,8 @@
 
 #import "IDESourceCodeEditor.h"
 
-@interface IDESourceCodeEditor (Hook)
+@interface IDESourceCodeEditor (HookPowerMode)
 
-+ (void)hook;
++ (void)hookPowerMode;
 
 @end
