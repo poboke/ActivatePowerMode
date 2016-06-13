@@ -17,7 +17,7 @@
 {
     [self jr_swizzleMethod:@selector(textView:shouldChangeTextInRange:replacementString:)
                 withMethod:@selector(powerMode_textView:shouldChangeTextInRange:replacementString:)
-                     error:nil];
+                     error:NULL];
 }
 
 
